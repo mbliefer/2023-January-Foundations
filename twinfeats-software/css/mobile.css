@@ -1,4 +1,4 @@
-html {
+body {
     font-size: xx-large;
 }
 
@@ -76,6 +76,11 @@ article {
     width: 100%;
 }
 
+#apps {
+    display: flex;
+    flex-direction: column;
+}
+
 #apps > .sidebar {
     display: none;
 }
@@ -89,6 +94,7 @@ article {
 
 .photobox img {
     height: 60vw;
+    width: auto;
     left: 50%;
 }
 
