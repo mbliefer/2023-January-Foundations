@@ -1,6 +1,6 @@
 html {
     font-size: 16pt;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 body {
@@ -35,7 +35,7 @@ a {
 
 .title,
 .logo {
-    font-family: "Indie Flower", sans-serif;
+    font-family: 'Indie Flower', sans-serif;
     font-size: 3em;
 }
 
@@ -235,7 +235,7 @@ article + img {
         left: 0;
     }
     60% {
-        left: 0
+        left: 0;
     }
     100% {
         left: -100vw;
@@ -256,7 +256,6 @@ article:target ~ #home {
 }
 
 .stage {
-    perspective: 1600px;
     perspective-origin: 50%;
     width: 22ch;
     margin-right: 1.5em;
@@ -336,6 +335,6 @@ article:target ~ #home {
     }
 }
 
-#mobile-nav, #mobile-trigger {
+#mobile-nav, #mobile-trigger, #bonus, .bonus-img {
     display: none;
 }
