@@ -87,45 +87,94 @@
 // /////////////////////////////////////////////
 // Javascript assignment
 // 1.
-var userName;
-userName = 'Mark';
-var admin;
-admin = 'Bob';
-var firstNumber;
-firstNumber = 14;
-// 2.
-var driver = 'Jerry'
-var pitBoss = 'Hank'
-var carNumber = 23;
-//3.
-var company = {
-    name: 'ABC Company',
-    address: {
-        streetAddress: '123 South St.',
-        city: 'Omaha',
-        state: 'NE',
-        zip: '68137'
-    },
-    phoneNumber: '555-123-4567',
-    employeeCount: 25
-}
-// 4.
-console.log("The name of the company is " + company.name + ". It is located at " + 
-company.address.streetAddress + " " + company.address.city + ", " + company.address.state + 
-" " + company.address.zip + " and its phone number is " + company.phoneNumber + ". The company has " +
-company.employeeCount + " employess.");
+// var userName;
+// userName = 'Mark';
+// var admin;
+// admin = 'Bob';
+// var firstNumber;
+// firstNumber = 14;
+// // 2.
+// var driver = 'Jerry'
+// var pitBoss = 'Hank'
+// var carNumber = 23;
+// //3.
+// var company = {
+//     name: 'ABC Company',
+//     address: {
+//         streetAddress: '123 South St.',
+//         city: 'Omaha',
+//         state: 'NE',
+//         zip: '68137'
+//     },
+//     phoneNumber: '555-123-4567',
+//     employeeCount: 25
+// }
+// // 4.
+// console.log("The name of the company is " + company.name + ". It is located at " + 
+// company.address.streetAddress + " " + company.address.city + ", " + company.address.state + 
+// " " + company.address.zip + " and its phone number is " + company.phoneNumber + ". The company has " +
+// company.employeeCount + " employess.");
 
-// 5.
-var food = ["Bread", "Ham", "Cheese", "Pickles", "Mustard"];
-food.pop();
-food.push("Onions", "Chicken", "Turkey");
-food.splice(1, 4);
-console.log(food);
-// 6.
-var score = 70;
-if (score === 100) {
-    console.log("You aced it!");
+// // 5.
+// var food = ["Bread", "Ham", "Cheese", "Pickles", "Mustard"];
+// food.pop();
+// food.push("Onions", "Chicken", "Turkey");
+// food.splice(1, 4);
+// console.log(food);
+// // 6.
+// var score = 70;
+// if (score === 100) {
+//     console.log("You aced it!");
+// }
+// else if (score > 69) {
+//     console.log("You passed!");
+// } else console.log("I'm sorry, you didn't pass.");
+
+// for (var i = 1; i <= 10; i++) {
+//     console.log("i is now " + i);
+// }
+// console.log("The loop has ended.");
+
+// for (var i = 10; i >= 1; i--) {
+//     console.log("i is now " + i);
+// }
+
+// for (var i = 3; i < 22; i+=3) {
+//     console.log("i is now " + i);
+// }
+
+var cars = ["Toyota", "Nissan", "Honda", "Subaru"];
+for (var i =0; i < cars.length; i++) {
+    console.log("Car " + (i + 1) + " is a " + cars[i]);
 }
-else if (score > 69) {
-    console.log("You passed!");
-} else console.log("I'm sorry, you didn't pass.");
+
+console.log("That's all the cars");
+
+for (var i = 1; i <= 20; i++) {
+    if (i % 2 == 0) {
+        console.log(i + " is even.");
+    } else {
+        console.log(i + " is odd.");
+    }
+}
+console.log("That's all folks!");
+
+// var numStudents = 8;
+// while (numStudents > 0) {
+//     console.log(numStudents + " little monkeys jumping on the bed.");
+//     numStudents--;
+// }
+// console.log("No more monkeys.");
+
+// var numBooks = 11;
+// while (numBooks < 10) {
+//     console.log("Number of books is " + numBooks);
+//     numBooks++;
+// }
+// console.log("While loop ended.");
+
+var numBooks = 11;
+do {
+    console.log("Number of books is " + numBooks);
+} while (numBooks < 10);
+console.log('Do while loop ended.');
