@@ -143,21 +143,21 @@
 //     console.log("i is now " + i);
 // }
 
-var cars = ["Toyota", "Nissan", "Honda", "Subaru"];
-for (var i =0; i < cars.length; i++) {
-    console.log("Car " + (i + 1) + " is a " + cars[i]);
-}
+// var cars = ["Toyota", "Nissan", "Honda", "Subaru"];
+// for (var i =0; i < cars.length; i++) {
+//     console.log("Car " + (i + 1) + " is a " + cars[i]);
+// }
 
-console.log("That's all the cars");
+// console.log("That's all the cars");
 
-for (var i = 1; i <= 20; i++) {
-    if (i % 2 == 0) {
-        console.log(i + " is even.");
-    } else {
-        console.log(i + " is odd.");
-    }
-}
-console.log("That's all folks!");
+// for (var i = 1; i <= 20; i++) {
+//     if (i % 2 == 0) {
+//         console.log(i + " is even.");
+//     } else {
+//         console.log(i + " is odd.");
+//     }
+// }
+// console.log("That's all folks!");
 
 // var numStudents = 8;
 // while (numStudents > 0) {
