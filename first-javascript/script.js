@@ -173,8 +173,107 @@
 // }
 // console.log("While loop ended.");
 
-var numBooks = 11;
-do {
-    console.log("Number of books is " + numBooks);
-} while (numBooks < 10);
-console.log('Do while loop ended.');
+// var numBooks = 11;
+// do {
+//     console.log("Number of books is " + numBooks);
+// } while (numBooks < 10);
+// console.log('Do while loop ended.');
+
+// function printHelloWorld()  {
+//     console.log('Hello World!');
+// }
+
+// printHelloWorld();
+
+// function add3Plus5() {
+//     var total = 3 + 5;
+//     console.log("Total is " + total);
+// }
+
+// add3Plus5();
+
+// function addTwoNumbers(num1, num2) {
+//     var total = num1 + num2;
+//     console.log("Total is " + total);
+//     return total;
+// }
+
+// addTwoNumbers(7, 12);
+
+// var price = addTwoNumbers(7, 12);
+// console.log("The price is " + price);
+
+// var houseArea;
+// var housePerimeter;
+
+// function getAreaOfHouse(length, width) {
+//     var area = length * width;
+//     return area; 
+// }
+
+// function getPerimeterOfHouse(length, width)  {
+//     var perimeter = (2 * length) + (2 * width);
+//     return perimeter;
+// }
+
+// var houseLength = 30;
+// var houseWidth = 15;
+
+// houseArea = getAreaOfHouse(houseLength, houseWidth);
+// housePerimeter = getPerimeterOfHouse(houseLength, houseWidth);
+
+// console.log(`My house is ${houseLength} feet by ${houseWidth} feet. It has and area of ${houseArea}
+// square feet and a perimeter of ${housePerimeter} feet.`);
+
+// var greeting = "Hello";
+// function sayGreeting() {
+//     console.log(greeting);
+// }
+
+// sayGreeting();
+// console.log(greeting);
+
+// function sayGoodbye() {
+//     var goodBye = "So long!";
+//     console.log(goodBye);
+// }
+
+// sayGoodbye();
+// console.log(goodBye);
+
+// var total = 3;
+
+// function getTotal() {
+//     var total = 5;
+//     console.log("Total in function = " + total);
+// }
+// getTotal();
+// console.log("Total outside function = "+ total);
+
+// function getMeasurements(length, width) {
+//     if (length > 40 && width > 20) {
+//         var perimeter = 2 * length + 2 * width;
+//     } else {
+//         console.log("You have too small a house to cae about the perimeter.");
+//     }
+//     console.log("The perimeter of your house is " + perimeter + " feet.");
+// }
+
+// getMeasurements(50, 50);
+
+// let catName = "Bob";
+// const dogName = "Jerry";
+// dogName = "Bill";
+
+var numbers = [1, 2, 3, 4, 5];
+// numbers.forEach(function(number) {
+//     console.log("The number was " + number);
+//     number *= number;
+//     console.log(number);
+// });
+
+numbers.forEach((number) => {
+    console.log("The number was " + number);
+    number *= number;
+    console.log(number);
+})
