@@ -16,6 +16,7 @@
     width: 10%;
     height: 10%;
     background-color: rgba(255, 0, 0, 0.5);
+    transform: translate(-50%, -50%);
 }
 
 #move {
@@ -49,6 +50,7 @@
 #block1.move {
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #block1.size {
