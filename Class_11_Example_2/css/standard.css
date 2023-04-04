@@ -50,10 +50,10 @@ nav > a {
 main {
     font-size: 2em;
     position: absolute;
+    width: 49vw;
     left: 50%;
     top: 50%;
     transform: translate(-50%, calc(-50% + 2em));
-    white-space: nowrap;
     text-align: center;
 }
 
