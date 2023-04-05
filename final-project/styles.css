@@ -35,7 +35,7 @@ header {
     color: rgb(220 206 231);
     font-size: 2rem;
     margin-top: 0;
-    margin-bottom: 5vw;
+    margin-bottom: 3vw;
 }
 
 img {
@@ -62,7 +62,7 @@ nav {
     margin: 0 20px;
 }
 
-a {
+header a {
     text-decoration: none;
     color: rgb(220 206 231);
 }
@@ -97,7 +97,7 @@ a {
     background-image: url(images/background-home.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    position: absolute;
+    position: fixed;
     height: 100vh;
     width: 100%;
     top: 0;
@@ -108,7 +108,7 @@ a {
 }
 
 .home-content {
-    margin: 50px;
+    margin: 100px 15vw;
 }
 
 .home-content p {
@@ -116,3 +116,17 @@ a {
     font-size: 1.2rem;
 }
 
+/* footer {
+    background-color: white;
+    opacity: .9;
+    position: sticky;
+    top: 100vh;
+    width: 100%;
+    opacity: .6;
+}
+
+footer a {
+    color: #2a2525;
+    text-decoration: none;
+    padding: 10px;
+} */
