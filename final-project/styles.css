@@ -15,12 +15,10 @@ header {
     padding-top: 5px;
     top: 0;
     left: 0;
-    /* background-color: #2a2525; */
     display: flex;
     align-items: end;
-    font-family: 'Alkatra', cursive;
+    /* font-family: 'Alkatra', cursive; */
     z-index: 10;
-    /* opacity: .9; */
     flex-wrap: wrap;
     background-color: rgb(22, 20, 20, .8);
 
@@ -36,9 +34,10 @@ header {
     color: rgb(220 206 231);
     font-size: 1.5rem;
     margin: 0;
+    align-self: center;
 }
 
-img {
+header img {
     /* position: absolute;
     z-index: 10;
     top: .5vh; */
@@ -48,21 +47,27 @@ img {
 .top-header {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     width: 100%;
 }
 
 nav {
     display: flex;
     column-gap: 3vh;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     flex-grow: 2;
     justify-content: center;
     flex-wrap: wrap-reverse;
-    border-top: solid 3px rgb(123 116 129);
-    padding-top: 1vw;
-    /* background-color: rgb(22, 20, 20, .8); */
-
+    border-top: solid 3px;
+    padding: 1vw;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right,
+        rgb(123 116 129), 
+        rgb(164, 155, 172), 
+        rgb(116, 67, 116), 
+        rgb(164, 155, 172),
+        rgb(123 116 129)
+        );
 }
 
 header a {
@@ -73,24 +78,34 @@ header a {
 .socials {
     display: flex;
     flex-grow: 1;
-    align-items: center;
-    align-self: start;
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
+    font-size: .9rem;
 }
 
-#home {
+a:hover {
+    background-image: linear-gradient(to right, 
+    rgb(116, 67, 116),
+    rgb(164, 155, 172));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.1);
+}
+
+
+#home, #services {
     width: 100%;
-    height: 100vh;
     text-align: center;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
+    flex-direction: column;
 }
 
-.home-content > h1 {
-    font-size: 2.5rem;
+.home-title > h1 {
+    font-size: 2rem;
     margin-bottom: 0;
 }
 
@@ -109,26 +124,96 @@ header a {
     background-position: center;
 }
 
-.home-content {
-    margin: 100px 15vw;
+.home-title {
+    margin: 200px 20vw 0;
+    border-bottom: solid 3px;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(45deg,
+        rgb(123, 116, 129, .7), 
+        rgb(164, 155, 172, .7), 
+        rgb(116, 67, 116, .7), 
+        rgb(164, 155, 172, .7),
+        rgb(123, 116, 129, .7)
+        );
+
 }
 
-.home-content p {
+.home-title p {
     line-height: 1.5;
-    font-size: 1.2rem;
 }
 
-/* footer {
-    background-color: white;
-    opacity: .9;
-    position: sticky;
-    top: 100vh;
-    width: 100%;
-    opacity: .6;
+.testimonials, #services {
+    margin: 200px 15vw 0;
+}
+
+.testimonial-content:nth-last-of-type(2) {
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.testimonials p {
+    line-height: 1.5;
+}
+
+.testimonials img {
+    height: 280px;
+    border-radius: 20px;
+    box-shadow: 16px 16px 16px 16px rgba(0,0,0,0.25), 
+    0 17px 50px 0 rgba(0,0,0,0.20);
+    align-self: end;
+
+}
+
+.testimonial-content {
+    text-align: left;
+    border-bottom: solid 3px;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right,
+        rgb(123, 116, 129), 
+        rgb(164, 155, 172), 
+        rgb(116, 67, 116));
+    margin-bottom: 150px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sofia, .bucky, .chubs {
+    flex-basis: 50%;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.image {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.bucky {
+    flex-direction: row-reverse;
+}
+
+footer {
+    background-image: linear-gradient(to bottom, 
+    rgb(241, 233, 247),
+    rgb(220 206 231),
+    rgb(164, 155, 172));
+    padding: 20px;
+    font-size: .8rem;
+    display: flex;
+    justify-content: center;
 }
 
 footer a {
     color: #2a2525;
     text-decoration: none;
     padding: 10px;
-} */
+    border-right: solid 1px;
+}
+
+footer a:last-child {
+    border-right: none;
+}
+
