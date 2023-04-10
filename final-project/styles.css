@@ -21,7 +21,6 @@ header {
     z-index: 10;
     flex-wrap: wrap;
     background-color: rgb(22, 20, 20, .8);
-
 }
 
 .company-name {
@@ -124,6 +123,12 @@ a:hover {
     background-position: center;
 }
 
+#services {
+    background-image: linear-gradient(to right, 
+    rgb(123, 116, 129, .2), 
+    rgb(164, 155, 172, .2));
+}
+
 .home-title {
     margin: 200px 20vw 0;
     border-bottom: solid 3px;
@@ -139,11 +144,27 @@ a:hover {
 }
 
 .home-title p {
-    line-height: 1.5;
+    line-height: 1.7;
+    font-size: 1.1rem;
 }
 
-.testimonials, #services {
+.testimonials {
     margin: 200px 15vw 0;
+}
+
+.orthotics {
+    margin-top: 200px;
+}
+
+.prosthetics {
+    margin-top: 50px;
+}
+
+.orthotics div:nth-of-type(1),
+.prosthetics div:nth-of-type(1) {
+    width: 66%;
+    font-size: 1.1rem;
+    line-height: 1.4;
 }
 
 .testimonial-content:nth-last-of-type(2) {
@@ -162,10 +183,13 @@ a:hover {
     box-shadow: 16px 16px 16px 16px rgba(0,0,0,0.25), 
     0 17px 50px 0 rgba(0,0,0,0.20);
     align-self: end;
-
 }
 
-.testimonial-content {
+#services img {
+    height: 20vw;
+}
+
+.testimonial-content, .orthotics, .prosthetics {
     text-align: left;
     border-bottom: solid 3px;
     border-image-slice: 1;
@@ -179,6 +203,12 @@ a:hover {
     flex-wrap: wrap;
 }
 
+.orthotics, .prosthetics {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+}
+
 .sofia, .bucky, .chubs {
     flex-basis: 50%;
     flex-grow: 1;
@@ -189,6 +219,33 @@ a:hover {
     display: flex;
     flex-grow: 1;
     justify-content: center;
+}
+
+.orthotic-image {
+    display: flex;
+    flex-grow: 1;
+}
+
+.orthotic-image img:first-child {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.orthotic-image img:nth-child(2) {
+    position: relative;
+    right: 2px;
+}
+
+.orthotic-image img:nth-child(3) {
+    position: relative;
+    right: 3px;
+}
+
+.orthotic-image img:last-child {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: relative;
+    right: 4px;
 }
 
 .bucky {
