@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    background-image: url(./vector-speaker-1680x1050.jpg);
+    color: #fff;
+    font: 16px/1.4 "Nanum Myeongj", serif;
+}
+
+header {
+    width: 40%;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+header, form, button, footer {
+    margin: 2em;
+}
+
+form {
+    width: 40%;
+}
+
+.enterInfo {
+    display: block;
+    width: 42%;
+}
+
+.enterInfo > input {
+    float: right;
+}
+
+fieldset {
+    border-radius: 10px;
+    padding: 1em;
+}
+
+legend {
+    padding-top: 1em;
+}
+
+select, input, textarea {
+    /* background-color: #e3e397; */
+    background-image: linear-gradient(to right,
+    rgb(227, 227, 151),
+    rgb(255, 165, 0));
+}
+
+button {
+    padding: 10px;
+    width: 10vw;
+    background-image: linear-gradient(to right,
+    rgb(227, 227, 151),
+    rgb(255, 165, 0));
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+a {
+    text-decoration: none;
+    color: orange;
+    border: 3px solid orange;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+a:hover {
+    background-color: greenyellow;
+    color: black;
+}
