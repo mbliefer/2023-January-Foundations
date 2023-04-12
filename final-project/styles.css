@@ -41,6 +41,7 @@ header img {
     z-index: 10;
     top: .5vh; */
     height: 40px;
+    /* filter: invert(23%) sepia(56%) saturate(1259%) hue-rotate(220deg) brightness(89%) contrast(90%); */
 }
 
 .top-header {
@@ -156,8 +157,8 @@ a:hover {
     margin-top: 200px;
 }
 
-.prosthetics {
-    margin-top: 50px;
+.prosthetics, #images {
+    margin: 50px 0;
 }
 
 .orthotics div:nth-of-type(1),
