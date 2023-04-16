@@ -100,7 +100,8 @@ footer a:last-child:hover {
 
 
 #home,
-#services {
+#services,
+#resources {
     width: 100%;
     text-align: center;
     display: flex;
@@ -110,15 +111,26 @@ footer a:last-child:hover {
 }
 
 .home-title>h1,
-#staff h1 {
+#staff h1,
+#resources h1 {
     font-size: 2rem;
     margin-bottom: 0;
 }
 
-#home::before {
+#resources h1 {
+    margin-top: 75px;
+    width: 50vw;
+    border-bottom: solid 3px;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right,
+            rgb(123, 116, 129),
+            rgb(164, 155, 172),
+            rgb(116, 67, 116));
+    align-self: center;
+}
+
+#home::before, #resources::before {
     content: "";
-    background-image: url(images/background-home.jpg);
-    background-size: cover;
     background-repeat: no-repeat;
     position: fixed;
     height: 100vh;
@@ -130,10 +142,22 @@ footer a:last-child:hover {
     background-position: center;
 }
 
+#home::before {
+    background-image: url(images/background-home.jpg);
+    background-size: cover;
+}
+
+#resources::before {
+    background-image: url(images/bionic-leg\ \(1\).png);
+    background-size: auto;
+    background-repeat: repeat-x;
+    opacity: .15;
+}
+
 #services {
-    background-image: linear-gradient(to right,
-            rgb(123, 116, 129, .2),
-            rgb(164, 155, 172, .2));
+    background-image: linear-gradient(to bottom,
+            rgba(228, 225, 230, 0.2),
+            rgba(170, 167, 172, 0.2));
 }
 
 .home-title {
@@ -264,28 +288,6 @@ footer a:last-child:hover {
     flex-direction: row-reverse;
 }
 
-footer {
-    background-image: linear-gradient(to bottom,
-            rgb(245, 243, 247),
-            rgb(210, 206, 212),
-            rgb(170, 168, 172));
-    padding: 20px;
-    font-size: .8rem;
-    display: flex;
-    justify-content: center;
-}
-
-footer a {
-    color: #2a2525;
-    text-decoration: none;
-    padding: 10px;
-    border-right: solid 1px;
-}
-
-footer a:last-child {
-    border-right: none;
-}
-
 .staff-overview {
     position: relative;
 }
@@ -295,7 +297,7 @@ footer a:last-child {
     z-index: -1;
     top: 0;
     right: 0;
-    height: 34vw;
+    height: 30vw;
     border-bottom: solid 25px;
     border-image-slice: 1;
     border-image-source: linear-gradient(to right,
@@ -310,7 +312,7 @@ footer a:last-child {
     line-height: 2;
     background-color: rgb(210, 206, 212);
     padding: 5vw;
-    height: 26vw;
+    height: 22vw;
     transform: translate(3%, 3%);
     box-shadow: 16px 16px 16px 16px rgba(0, 0, 0, 0.25),
         0 17px 50px 0 rgba(0, 0, 0, 0.20), -3px -10px 16px 16px rgba(0, 0, 0, 0.25),
@@ -320,7 +322,7 @@ footer a:last-child {
 
 .bios {
     /* background-color: rgb(170, 168, 172); */
-    padding-top: 200px;
+    padding-top: 150px;
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -331,13 +333,19 @@ footer a:last-child {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 50px;
-    justify-content: left;
+    gap: 75px;
+    justify-content: center;
+    margin-bottom: 75px;
+    margin-top: 50px;
+}
+
+.people p {
+    width: 45ch;
 }
 
 .person {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     width: 55ch;
 }
@@ -358,3 +366,58 @@ li::before {
     width: 10px;
     background-image: url(./images/athletics.png);
 }
+
+#resources > .links {
+    padding-top: 0;
+    margin: 50px 30vw 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.links a {
+    color: #2a2525;
+    padding: 10px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    gap: 5px;
+}
+
+.links img {
+    width: fit-content;
+}
+
+
+footer {
+    background-image: linear-gradient(to bottom,
+            rgb(163, 163, 163),
+            rgb(222, 220, 223),
+            rgb(249, 248, 250));
+    padding: 30px;
+    font-size: .8rem;
+    display: flex;
+    justify-content: center;
+    /* border-top: solid 3px;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right,
+            rgb(123, 116, 129),
+            rgb(164, 155, 172),
+            rgb(116, 67, 116)); */
+
+}
+
+footer a {
+    color: #2a2525;
+    text-decoration: none;
+    padding: 10px;
+    border-right: solid 1px;
+}
+
+footer a:last-child {
+    border-right: none;
+}
+
