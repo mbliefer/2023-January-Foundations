@@ -11,7 +11,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
 </head>
 
@@ -44,10 +44,13 @@
                 1234 S. Limbloss Rd. <br>
                 Omaha, NE 68137 <br>
                 <b>P:</b> 402-555-1234 <br>
-                <b>F:</b> 402-555-4321
+                <b>F:</b> 402-555-4321 <br>
+                <p>Monday-Friday: 8AM-5PM</p>
+
             </div>
         </section>
         <section class="contact-form">
+            <h1>Connect With Us</h1>
             <form action="">
                 <!-- <label for="name"></label> -->
                 <input type="text" id="fullName" name="fullName" placeholder="Name...">
@@ -55,12 +58,13 @@
                     <!-- <label for="phoneNumber"></label> -->
                     <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone...">
                     <!-- <label for="emailAdress"></label> -->
-                    <input type="email" name="emailAdress" id="emailAdress" placeholder="Email...">
+                    <input type="email" name="emailAdress" id="emailAdress" placeholder="Email..." required>
                 </div>
                 <!-- <label for="messageSubject"></label> -->
                 <input type="text" id="messageSubject" name="messageSubject" placeholder="Subject...">
                 <!-- <label for="message"></label> -->
-                <textarea name="message" id="message" placeholder="Your message..." cols="60" rows="20"></textarea>
+                <textarea name="message" id="message" placeholder="Your message..." cols="60" rows="15"></textarea>
+                <button type="submit" id="submit">Submit Form</button>
             </form>
         </section>
     </article>

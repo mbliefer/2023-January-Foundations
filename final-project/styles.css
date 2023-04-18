@@ -1,6 +1,7 @@
 html {
     font-size: 16px;
     font-family: 'Ubuntu', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
     color: #2a2525;
 }
 
@@ -113,7 +114,8 @@ footer a:last-child:hover {
 
 .home-title>h1,
 #staff h1,
-#resources h1 {
+#resources h1,
+.contact-form h1 {
     font-size: 2rem;
     margin-bottom: 0;
 }
@@ -173,7 +175,7 @@ footer a:last-child:hover {
 }
 
 .home-title {
-    margin: 80px 20vw 0;
+    margin: 80px 25vw 0;
     border-bottom: solid 3px;
     border-image-slice: 1;
     border-image-source: linear-gradient(45deg,
@@ -214,6 +216,10 @@ footer a:last-child:hover {
     display: flex;
     flex-direction: row-reverse;
     text-align: right;
+}
+
+.testimonial-content:nth-of-type(3) {
+    border: none;
 }
 
 .testimonials p {
@@ -301,31 +307,33 @@ footer a:last-child:hover {
 }
 
 .staff-overview {
-    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
 }
 
 .staff-overview img {
-    position: absolute;
+    /* position: absolute; */
     z-index: -1;
-    top: 0;
-    right: 0;
-    height: 30vw;
+    /* top: 0; */
+    /* right: 0; */
+    /* height: 25vw; */
     border-bottom: solid 25px;
     border-image-slice: 1;
     border-image-source: linear-gradient(to right,
             rgb(123, 116, 129),
             rgb(164, 155, 172),
             rgb(116, 67, 116));
-    margin-bottom: 150px;
+    /* margin-bottom: 150px; */
 }
 
 .staff-overview>div {
-    width: 45vw;
+    width: 55vw;
     line-height: 2;
     background-color: rgb(210, 206, 212);
-    padding: 5vw;
-    height: 22vw;
-    transform: translate(3%, 3%);
+    padding: 1vw;
+    height: 25vw;
+    transform: translate(3%, 8%);
     box-shadow: 16px 16px 16px 16px rgba(0, 0, 0, 0.25),
         0 17px 50px 0 rgba(0, 0, 0, 0.20), -3px -10px 16px 16px rgba(0, 0, 0, 0.25),
         0 -17px 50px 0 rgba(0, 0, 0, 0.20);
@@ -370,15 +378,6 @@ footer a:last-child:hover {
     list-style: none;
 }
 
-li::before {
-    content: '';
-    display: inline-block;
-    margin-right: 10px;
-    height: 10px;
-    width: 10px;
-    background-image: url(./images/athletics.png);
-}
-
 #resources > .links {
     padding-top: 0;
     margin: 50px 30vw 100px;
@@ -403,6 +402,10 @@ li::before {
     width: fit-content;
 }
 
+.contact-top {
+    margin-bottom: 100px;
+}
+
 .contact-top > div {
     padding: 100px 15vw 100px 45vw;
     text-align: center;
@@ -414,13 +417,49 @@ li::before {
     display: flex;
     justify-content: center;
     gap: 10px;
+    align-items: center;
+}
+
+.contact-form {
+    flex-direction: column;
+}
+
+form * {
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    background-color: rgb(222, 220, 223);
+    font-family: 'Roboto', sans-serif;
+}
+
+form > .phone-email {
+    border: none;
+    padding: 0;
+    background: none;
+}
+
+#phoneNumber, #emailAdress {
+    flex-grow: 1;
 }
 
 .contact-form > form {
-    margin: 100px;
+    margin: 10px 150px 100px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+#submit {
+    padding: 10px;
+    background-color: rgb(86 46 149);
+    color: rgb(220 206 231);
+    font-weight: bold;
+}
+
+#submit:hover {
+    cursor: pointer;
+    background-color: rgb(55, 29, 97);
 }
 
 
