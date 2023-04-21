@@ -319,7 +319,8 @@ footer a:last-child:hover {
     background-image: linear-gradient(to right,
     rgb(123, 116, 129),
     rgb(164, 155, 172),
-    rgb(116, 67, 116));
+    rgb(101 77 149));
+    /* rgb(116, 67, 116)); */
 }
 
 .staff-overview img {
@@ -344,7 +345,21 @@ footer a:last-child:hover {
     color: white;
 }
 
-.fa-solid {
+.who-we-are {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.fa-users {
+    font-size: 3rem;
+    color: rgb(101 77 149);
+}
+
+.fa-star-of-life {
     color: rgb(147, 112, 219);
 }
 
