@@ -1,36 +1,62 @@
-#home, #about {
-    /* content: ""; */
-    background-repeat: no-repeat;
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-}
 
-#home {
+
+#home::before {
     background-image: url(../images/kitten-v.jpg);
 }
 
-#about {
+#about::before {
     background-image: url(../images/kitten-flying-v.jpg);
 }
 
-h1, h2 {
+h1 {
     font-size: 1.5rem;
+    margin-top: 0;
 }
 
+h2 {
+    font-size: .8rem;
+    margin-top: 50px;
+}
+
+header img {
+    height: 1.2rem;
+}
+
+header {
+    margin: 2px;
+}
+
+.orange {
+    text-shadow: 1px 1px black;
+}
+
+
 #about h2 {
-    position: fixed;
+    top: 115px;
+    left: 153px;
+    font-size: .8rem;
+    line-height: 1.3;
+    width: 120px;
+}
+
+#schedule {
+    width: 345px;
+    font-size: .9rem;
+}
+
+#contact {
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+#contact a, #contact i {
+    display: block;
+    margin-bottom: 10px;
 }
 
 footer {
-    margin: 10px;
-    padding: 0;
+    margin: 0;
+    padding: 15px;
 }
 
 footer a {

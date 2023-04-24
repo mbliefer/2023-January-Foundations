@@ -1,12 +1,19 @@
 body {
     font-family: 'Montserrat', sans-serif;
+    margin: 0;
 }
 
 #home, #about {
-    /* content: ""; */
-    background-repeat: no-repeat;
     position: relative;
     height: 100vh;
+    width: 100%;
+}
+
+#home::before, #about::before {
+    content: "";
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
     width: 100%;
     top: 0;
     left: 0;
@@ -16,11 +23,11 @@ body {
     background-attachment: fixed;
 }
 
-#home {
+#home::before {
     background-image: url(../images/playful-kitten-6683.jpg);
 }
 
-#about {
+#about::before {
     background-image: url(../images/kitten-flying.jpg);
 }
 
@@ -49,10 +56,16 @@ header img {
     position: relative;
     top: 5px;
     transition: transform .7s ease-in-out;
+    display: inline-block;
 }
 
-header img:hover {
-    transform: rotateY(360deg);
+/* header > h2 > img:hover {
+    transform: rotateY(360deg) !important;
+} */
+
+.netflix:hover {
+    transform: rotateY(360deg) !important;
+    cursor: pointer;
 }
 
 #about h2 {
@@ -81,12 +94,12 @@ header img:hover {
     display: flex;
     flex-direction: column;
     top: 50%;
-    left: -100vw;
+    left: -50%;
 }
 
 #contact {
     top: 50%;
-    left: -100vw;
+    left: -50%;
     padding: 30px;
 }
 
@@ -98,8 +111,28 @@ i {
     margin-left: 15px;
 }
 
-#schedule:target, #contact:target {
+/* #schedule:target, #contact:target {
     left: 50%;
+} */
+
+#schedule.show, #contact.show {
+    left: 50%;
+}
+
+#contact.show {
+    animation: spinright .5s;
+}
+
+@keyframes spinright {
+    0% {left: -50%;}
+    /* 12.5% {left: -37.5%; rotate: 45deg;}
+    25% {left: -25%; rotate: 90deg;}
+    37.5% {left: -12.5%; rotate: 135deg;} */
+    50% {left: 0%; rotate: 180deg;}
+    62.5% {left: 12.5%; rotate: 225deg;}
+    75% {left: 25%; rotate: 270deg;}
+    87.5% {left: 37.5%; rotate: 315deg;}
+    100% {left: 50%; rotate: 360deg;}
 }
 
 #schedule img, #contact img {
@@ -111,7 +144,7 @@ i {
 }
 
 .title {
-    width: 15ch;
+    width: 10ch;
 }
 
 .description {
@@ -146,11 +179,17 @@ footer a {
     text-shadow: 1px 1px black;
     margin-left: 30px;
     font-weight: bold;
+    display: inline-block;
+    width: min-content;
+    text-align: center;
 }
 
-a:hover {
-    background: url(../images/pawprint.png) no-repeat;
-    transform: translateY(30px);
+a:hover::after {
+    content: url(../images/pawprint.png);
+}
+
+article img:hover {
+    cursor: pointer;
 }
 
 
