@@ -32,11 +32,22 @@ header {
     margin-left: 50px;
 }
 
+.company-name-a {
+    display: flex;
+}
+
 .company-name h1 {
     color: rgb(220 206 231);
     font-size: 1.5rem;
     margin: 0;
     align-self: center;
+    animation: text 0s 1s forwards;
+    visibility: hidden;
+    position: relative;
+}
+
+@keyframes text {
+    to {visibility: visible;}
 }
 
 header img {
@@ -44,7 +55,24 @@ header img {
     z-index: 10;
     top: .5vh; */
     height: 50px;
+    animation: logo 1s;
+    position: relative;
+
     /* filter: invert(23%) sepia(56%) saturate(1259%) hue-rotate(220deg) brightness(89%) contrast(90%); */
+}
+
+@keyframes logo {
+    0% {left: 0;}
+    /* 10% {left: 10%; rotate: -15deg;} */
+    20% {left: 20%; rotate: 15deg;}
+    /* 30% {left: 30%; rotate: -15deg;}
+    40% {left: 40%; rotate: 15deg;} */
+    50% {left: 50%; rotate: -15deg;}
+    /* 60% {left: 60%; rotate: 15deg;}
+    70% {left: 70%; rotate: -15deg;}  */
+    80% {left: 80%; rotate: 15deg;} 
+    /* 90% {left: 90%; rotate: -15deg;} */
+    100% {left: 150%;}
 }
 
 .top-header {
@@ -86,9 +114,12 @@ header a {
     flex-wrap: wrap;
     gap: 10px;
     font-size: .9rem;
+    /* animation: text 0s 1.5s forwards;
+    visibility: hidden;
+    position: relative; */
 }
 
-a:hover {
+a:not(.company-name):hover {
     background-image: linear-gradient(to right,
             /* rgb(116, 67, 116), */
             rgb(218, 202, 240),
@@ -98,6 +129,10 @@ a:hover {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     transform: scale(1.1);
+}
+
+a.company-name:hover {
+    cursor: pointer;
 }
 
 footer a:last-child:hover {
@@ -155,7 +190,7 @@ footer a:last-child:hover {
 }
 
 #resources::before {
-    background-image: url(images/bionic-leg\ \(1\).png);
+    background-image: url(images/resources-background.png);
     background-size: auto;
     background-repeat: repeat-x;
     opacity: .15;
