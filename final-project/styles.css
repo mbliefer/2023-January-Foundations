@@ -119,7 +119,7 @@ header a {
     position: relative; */
 }
 
-a:not(.company-name):hover {
+a:not(.company-name-a):hover {
     background-image: linear-gradient(to right,
             /* rgb(116, 67, 116), */
             rgb(218, 202, 240),
@@ -131,7 +131,7 @@ a:not(.company-name):hover {
     transform: scale(1.1);
 }
 
-a.company-name:hover {
+a.company-name-a:hover {
     cursor: pointer;
 }
 
@@ -238,13 +238,21 @@ footer a:last-child:hover {
     margin: 200px 15vw 0;
 }
 
+.prosthetics,
+#images,
 .orthotics {
-    margin-top: 50px;
+    margin: 100px 0;
 }
 
-.prosthetics,
-#images {
-    margin: 50px 0;
+.orthotic-image > img {
+    animation: orthoimages 3s linear;
+    animation-fill-mode: forwards;
+    /* animation-fill-mode: backwards; */
+}
+
+@keyframes orthoimages {
+   0% {transform: translateX(-500%);}
+   100% {transform: translateX(0%);}
 }
 
 .orthotics div:nth-of-type(1),
@@ -325,6 +333,7 @@ footer a:last-child:hover {
 .orthotic-image img:first-child {
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    position: relative;
 }
 
 .orthotic-image img:nth-child(2) {
