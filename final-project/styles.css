@@ -20,7 +20,6 @@ header {
     left: 0;
     display: flex;
     align-items: end;
-    /* font-family: 'Alkatra', cursive; */
     z-index: 10;
     flex-wrap: wrap;
     background-color: rgb(22, 20, 20, .8);
@@ -41,9 +40,22 @@ header {
     font-size: 1.5rem;
     margin: 0;
     align-self: center;
-    animation: text 0s 1s forwards;
-    visibility: hidden;
     position: relative;
+}
+
+.text-logo {
+    animation: text 0s .5s forwards;
+    visibility: hidden;
+}
+
+.text-logo-contact,
+.socials-contact {
+    animation: textContact 0s 2s forwards;
+    visibility: hidden;
+}
+
+@keyframes textContact {
+    to {visibility: visible;}
 }
 
 @keyframes text {
@@ -51,28 +63,39 @@ header {
 }
 
 header img {
-    /* position: absolute;
-    z-index: 10;
-    top: .5vh; */
     height: 50px;
-    animation: logo 1s;
     position: relative;
-
     /* filter: invert(23%) sepia(56%) saturate(1259%) hue-rotate(220deg) brightness(89%) contrast(90%); */
+}
+
+.logo {
+    animation: logo .5s;
 }
 
 @keyframes logo {
     0% {left: 0;}
-    /* 10% {left: 10%; rotate: -15deg;} */
     20% {left: 20%; rotate: 15deg;}
-    /* 30% {left: 30%; rotate: -15deg;}
-    40% {left: 40%; rotate: 15deg;} */
     50% {left: 50%; rotate: -15deg;}
-    /* 60% {left: 60%; rotate: 15deg;}
-    70% {left: 70%; rotate: -15deg;}  */
     80% {left: 80%; rotate: 15deg;} 
-    /* 90% {left: 90%; rotate: -15deg;} */
     100% {left: 150%;}
+}
+
+.logo-contact {
+    animation: logoContact 2s;
+}
+
+@keyframes logoContact {
+    0% {left: 0;}
+    10% {left: 20%; rotate: -15deg;}
+    20% {left: 40%; rotate: 15deg;}
+    30% {left: 60%; rotate: -15deg;}
+    40% {left: 80%; rotate: 15deg;}
+    50% {left: 100%; rotate: -15deg;}
+    60% {left: 120%; rotate: 15deg;}
+    70% {left: 140%; rotate: -15deg;} 
+    80% {left: 160%; rotate: 15deg;} 
+    90% {left: 180%; rotate: -15deg;}
+    100% {left: 1000%;}
 }
 
 .top-header {
@@ -95,8 +118,6 @@ nav {
     border-image-source: linear-gradient(to right,
             rgb(234, 226, 250),
             rgb(219,164,219),
-            /* rgb(116, 67, 116), */
-            /* rgb(124, 97, 181), */
             rgb(123,88,171),
             rgb(219,164,219),
             rgb(234, 226, 250));
@@ -114,16 +135,11 @@ header a {
     flex-wrap: wrap;
     gap: 10px;
     font-size: .9rem;
-    /* animation: text 0s 1.5s forwards;
-    visibility: hidden;
-    position: relative; */
 }
 
 a:not(.company-name-a):hover {
     background-image: linear-gradient(to right,
-            /* rgb(116, 67, 116), */
             rgb(218, 202, 240),
-            /* rgb(164, 155, 172)); */
             rgb(123, 88, 171));
     -webkit-background-clip: text;
     background-clip: text;
@@ -145,8 +161,6 @@ footer a:last-child:hover {
     width: 100%;
     text-align: center;
     display: flex;
-    /* justify-content: center;
-    align-items: center; */
     flex-direction: column;
 }
 
@@ -218,14 +232,9 @@ footer a:last-child:hover {
     border-bottom: solid 3px;
     border-image-slice: 1;
     border-image-source: linear-gradient(90deg,
-            /* rgb(123, 116, 129, .7), */
-            /* rgb(164, 155, 172, .7), */
             rgb(135, 113, 163),
             rgb(113, 69, 180),
             rgb(171, 117, 248));
-            /* rgb(116, 67, 116, .7), */
-            /* rgb(164, 155, 172, .7), */
-            /* rgb(123, 116, 129, .7)); */
 
 }
 
@@ -244,15 +253,20 @@ footer a:last-child:hover {
     margin: 100px 0;
 }
 
+.orthotic-image img:hover {
+    transform: scale(1.7);
+    z-index: 10;
+}
+
 .orthotic-image > img {
-    animation: orthoimages 3s linear;
+    animation: orthoimages 1.5s linear;
     animation-fill-mode: forwards;
-    /* animation-fill-mode: backwards; */
+    transition: 2s;
 }
 
 @keyframes orthoimages {
-   0% {transform: translateX(-500%);}
-   100% {transform: translateX(0%);}
+    0% {scale: 0.5; opacity: .5;}
+   100% {scale: 1; opacity: 1;}
 }
 
 .orthotics div:nth-of-type(1),
@@ -284,8 +298,59 @@ footer a:last-child:hover {
     align-self: end;
 }
 
+#images {
+    background-color: rgb(102, 101, 104);
+}
+
 #services img {
     height: 20vw;
+}
+
+#services #images img {
+    display: none;
+}
+
+#services #images .show-image {
+    display: inline-block;
+    margin: 25px;
+    height: 16vw;
+}
+
+#services #images .show-image,
+#images button {
+    cursor: pointer;
+}
+
+.prev, .next {
+    height: 40px;
+    width: 30px;
+    margin: 0px 10px 20px;
+}
+
+#services #images #big-image {
+    border: 50px solid rgb(142, 141, 145);
+    background-color: rgb(102, 101, 104);
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+}
+
+#services #images #big-image img {
+    display: inline-block;
+}
+
+#services .closex {
+    position: absolute;
+    height: 50px;
+    top: -50px;
+    background-color: black;
+    cursor: pointer;
+}
+
+#big-image img:first-child {
+    height: 40vw;
 }
 
 .testimonial-content,
@@ -364,7 +429,6 @@ footer a:last-child:hover {
     rgb(123, 116, 129),
     rgb(164, 155, 172),
     rgb(101 77 149));
-    /* rgb(116, 67, 116)); */
 }
 
 .staff-overview img {
@@ -408,7 +472,6 @@ footer a:last-child:hover {
 }
 
 .bios {
-    /* background-color: rgb(170, 168, 172); */
     padding-top: 150px;
     display: flex;
     flex-direction: column;
@@ -428,6 +491,7 @@ footer a:last-child:hover {
 
 .people p {
     width: 45ch;
+    text-align: center;
 }
 
 .person {
@@ -439,6 +503,12 @@ footer a:last-child:hover {
 
 .person img {
     height: 300px;
+    width: 212px;
+}
+
+.person h2,
+.person h3 {
+    margin: 5px;
 }
 
 .we li {
@@ -529,6 +599,14 @@ form > .phone-email {
     background-color: rgb(55, 29, 97);
 }
 
+/* .top {
+    height: 40px;
+    position: fixed;
+    bottom: 10%;
+    right: 0;
+    cursor: pointer;
+} */
+
 
 footer {
     background-image: linear-gradient(to bottom,
@@ -539,13 +617,6 @@ footer {
     font-size: .8rem;
     display: flex;
     justify-content: center;
-    /* border-top: solid 3px;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(to right,
-            rgb(123, 116, 129),
-            rgb(164, 155, 172),
-            rgb(116, 67, 116)); */
-
 }
 
 footer a {
